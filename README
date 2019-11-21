@@ -1,0 +1,10 @@
+# sendMessage
+
+# get start
+
+```golang
+var request WeChatWorkRequest
+request.XXX = XXX
+...
+senMessage.Send(request)
+```
