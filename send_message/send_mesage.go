@@ -1,7 +1,6 @@
-package sendMessage
+package send_message
 
 import (
-	"WeChatWork/url"
 	"encoding/json"
 	"errors"
 	"github.com/pangpanglabs/goutils/behaviorlog"
@@ -21,7 +20,7 @@ const (
 
 //https://work.weixin.qq.com/api/doc#90000/90135/90236
 func Send(request WeChatWorkRequest) error {
-	senMsgUrl := url.WeChatWorkURL + "/send?access_token=" + request.AccessToken
+	senMsgUrl := WeChatWorkURL + "/send?access_token=" + request.AccessToken
 	msg := make(map[string]interface{}, 0)
 	detail := make(map[string]interface{}, 0)
 	msg["touser"] = request.ToUser

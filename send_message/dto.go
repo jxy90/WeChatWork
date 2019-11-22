@@ -1,4 +1,4 @@
-package sendMessage
+package send_message
 
 type WeChatWorkRequest struct {
 	AccessToken        string             `json:"access_token"`
