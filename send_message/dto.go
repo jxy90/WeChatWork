@@ -15,115 +15,115 @@ const (
 )
 
 type WeChatWorkRequest struct {
-	AccessToken   string             `json:"access_token"`
-	ToUser        string             `json:"touser"`
-	ToParty       string             `json:"toparty"`
-	ToTag         string             `json:"totag"`
-	MessageType   string             `json:"msgtype"`
-	AgentId       int                `json:"agentid"`
-	Safe          int                `json:"safe"`
-	EnableIdTrans int                `json:"enable_id_trans"`
-	Text          WeChatWorkText     `json:"text"`
-	Image         WeChatWorkImage    `json:"image"`
-	Voice         WeChatWorkVoice    `json:"voice"`
-	Video         WeChatWorkVideo    `json:"video"`
-	File          WeChatWorkFile     `json:"file"`
-	TextCard      WeChatWorkTextCard `json:"textcard"`
-	News          WeChatWorkNews     `json:"news"`
-	MPNews        WeChatWorkMPNews   `json:"mpnews"`
-	MarkDown      WeChatWorkMarkDown `json:"markdown"`
-	//MiniProgramNotice WeChatWorkMiniProgramNotice `json:"miniprogram_notice"`
-	TaskCard WeChatWorkTaskCard `json:"taskcard"`
+	AccessToken   string             `json:"access_token,ommitempty"`
+	ToUser        string             `json:"touser,ommitempty"`
+	ToParty       string             `json:"toparty,ommitempty"`
+	ToTag         string             `json:"totag,ommitempty"`
+	MessageType   string             `json:"msgtype,ommitempty"`
+	AgentId       int                `json:"agentid,ommitempty"`
+	Safe          int                `json:"safe,ommitempty"`
+	EnableIdTrans int                `json:"enable_id_trans,ommitempty"`
+	Text          WeChatWorkText     `json:"text,ommitempty"`
+	Image         WeChatWorkImage    `json:"image,ommitempty"`
+	Voice         WeChatWorkVoice    `json:"voice,ommitempty"`
+	Video         WeChatWorkVideo    `json:"video,ommitempty"`
+	File          WeChatWorkFile     `json:"file,ommitempty"`
+	TextCard      WeChatWorkTextCard `json:"textcard,ommitempty"`
+	News          WeChatWorkNews     `json:"news,ommitempty"`
+	MPNews        WeChatWorkMPNews   `json:"mpnews,ommitempty"`
+	MarkDown      WeChatWorkMarkDown `json:"markdown,ommitempty"`
+	//MiniProgramNotice WeChatWorkMiniProgramNotice `json:"miniprogram_notice,ommitempty"`
+	TaskCard WeChatWorkTaskCard `json:"taskcard,ommitempty"`
 }
 
 type WeChatWorkText struct {
-	Content string `json:"content"`
+	Content string `json:"content,ommitempty"`
 }
 
 type WeChatWorkImage struct {
-	MediaId string `json:"media_id"`
+	MediaId string `json:"media_id,ommitempty"`
 }
 
 type WeChatWorkVoice struct {
-	MediaId string `json:"media_id"`
+	MediaId string `json:"media_id,ommitempty"`
 }
 
 type WeChatWorkVideo struct {
-	MediaId     string `json:"media_id"`
-	Title       string `json:"title"`
-	Description string `json:"description"`
+	MediaId     string `json:"media_id,ommitempty"`
+	Title       string `json:"title,ommitempty"`
+	Description string `json:"description,ommitempty"`
 }
 
 type WeChatWorkFile struct {
-	MediaId string `json:"media_id"`
+	MediaId string `json:"media_id,ommitempty"`
 }
 
 type WeChatWorkTextCard struct {
-	Title       string `json:"title"`
-	Description string `json:"description"`
-	Url         string `json:"url"`
-	Btntxt      string `json:"btntxt"`
+	Title       string `json:"title,ommitempty"`
+	Description string `json:"description,ommitempty"`
+	Url         string `json:"url,ommitempty"`
+	Btntxt      string `json:"btntxt,ommitempty"`
 }
 
 type WeChatWorkNews struct {
-	Articles []WeChatWorkNewsArticle `json:"articles" `
+	Articles []WeChatWorkNewsArticle `json:"articles,ommitempty"`
 }
 type WeChatWorkNewsArticle struct {
-	Title       string `json:"title"`
-	Description string `json:"description"`
-	Url         string `json:"url"`
-	PicUrl      string `json:"picurl"`
+	Title       string `json:"title,ommitempty"`
+	Description string `json:"description,ommitempty"`
+	Url         string `json:"url,ommitempty"`
+	PicUrl      string `json:"picurl,ommitempty"`
 }
 
 type WeChatWorkMPNews struct {
-	Articles []WeChatWorkMPNewsArticle `json:"articles" `
+	Articles []WeChatWorkMPNewsArticle `json:"articles,ommitempty"`
 }
 type WeChatWorkMPNewsArticle struct {
-	Title            string `json:"title"`
-	ThumbMediaId     string `json:"thumb_media_id"`
-	Author           string `json:"author"`
-	ContentSourceUrl string `json:"content_source_url"`
-	Content          string `json:"content"`
-	Digest           string `json:"digest"`
+	Title            string `json:"title,ommitempty"`
+	ThumbMediaId     string `json:"thumb_media_id,ommitempty"`
+	Author           string `json:"author,ommitempty"`
+	ContentSourceUrl string `json:"content_source_url,ommitempty"`
+	Content          string `json:"content,ommitempty"`
+	Digest           string `json:"digest,ommitempty"`
 }
 
 type WeChatWorkMarkDown struct {
-	Content string `json:"content" `
+	Content string `json:"content,ommitempty"`
 }
 
 type WeChatWorkMiniProgramNotice struct {
-	AppId             string                            `json:"appid" `
-	Page              string                            `json:"page" `
-	Title             string                            `json:"title" `
-	Description       string                            `json:"description" `
-	EmphasisFirstItem bool                              `json:"emphasis_first_item" `
-	ContentItem       []WeChatWorkMiniProgramNoticeItem `json:"content_item" `
+	AppId             string                            `json:"appid,ommitempty"`
+	Page              string                            `json:"page,ommitempty"`
+	Title             string                            `json:"title,ommitempty"`
+	Description       string                            `json:"description,ommitempty"`
+	EmphasisFirstItem bool                              `json:"emphasis_first_item,ommitempty"`
+	ContentItem       []WeChatWorkMiniProgramNoticeItem `json:"content_item,ommitempty"`
 }
 
 type WeChatWorkMiniProgramNoticeItem struct {
-	Key   string `json:"key" `
-	Value string `json:"value" `
+	Key   string `json:"key,ommitempty"`
+	Value string `json:"value,ommitempty"`
 }
 
 type WeChatWorkTaskCard struct {
-	title       string `json:"title" `
-	description string `json:"description" `
-	url         string `json:"url" `
-	task_id     string `json:"task_id" `
-	btn         string `json:"btn" `
+	title       string `json:"title,ommitempty"`
+	description string `json:"description,ommitempty"`
+	url         string `json:"url,ommitempty"`
+	task_id     string `json:"task_id,ommitempty"`
+	btn         string `json:"btn,ommitempty"`
 }
 type WeChatWorkTaskCardBtn struct {
-	Key         string `json:"key" `
-	Name        string `json:"name" `
-	ReplaceName string `json:"replace_name" `
-	Color       string `json:"color" `
-	IsBold      bool   `json:"is_bold" `
+	Key         string `json:"key,ommitempty"`
+	Name        string `json:"name,ommitempty"`
+	ReplaceName string `json:"replace_name,ommitempty"`
+	Color       string `json:"color,ommitempty"`
+	IsBold      bool   `json:"is_bold,ommitempty"`
 }
 
 var WeChatWorkResponse struct {
-	ErrCode      int    `json:"errcode"`
-	ErrMsg       string `json:"errmsg"`
-	InvalidUser  string `json:"invalidtag"`
-	InvalidParty string `json:"invalidparty"`
-	InvalidTag   string `json:"invalidtag"`
+	ErrCode      int    `json:"errcode,ommitempty"`
+	ErrMsg       string `json:"errmsg,ommitempty"`
+	InvalidUser  string `json:"invalidtag,ommitempty"`
+	InvalidParty string `json:"invalidparty,ommitempty"`
+	InvalidTag   string `json:"invalidtag,ommitempty"`
 }
